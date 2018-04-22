@@ -2940,6 +2940,8 @@ CM.Sim.CalculateGains = function() {
 	if (CM.Sim.Has('An itchy sweater')) mult *= 1.01;
 	if (CM.Sim.Has('Santa\'s dominion')) mult *= 1.2;
 
+	if (Game.Objects.Farm.minigame) mult *= Game.Objects.Farm.minigame.effs.cps;
+
 	var buildMult=1;
 	if (Game.hasGod) {
 		var godLvl = Game.hasGod('asceticism');
